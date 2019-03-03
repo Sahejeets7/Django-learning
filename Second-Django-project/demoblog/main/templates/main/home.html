@@ -1,0 +1,29 @@
+{% extends 'main/basetemp.html' %}
+
+{% block newblock %}
+<script>M.toast({html: 'Hi!  Welcome to the homepage',classes:' orange rounded',displayLength: 2000});</script>
+
+
+
+<div class="row">
+  {% for t in topics %}
+    <div class="col s12 m8 l4">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="C:\Users\Sahz\Desktop\imgs\elon musk.jpg">
+          <span class="card-title">{{t.title}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{t.content|safe|linebreaks}}</p>
+        </div>
+        <div class="card-action">
+          <a href="{{t.id}}/">Read more..</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+
+
+
+{% endblock %}

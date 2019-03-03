@@ -1,0 +1,15 @@
+{% extends 'main/basetemp.html' %}
+
+{% block newblock %}
+  <form method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <br>
+      <button class='btn' type="submit" name="button">Register</button>
+  </form>
+  <br><br>
+  If you already have an account <a href="/login"><strong>login</strong></a> instead.
+  <br><br><br><br>
+
+
+{% endblock %}
